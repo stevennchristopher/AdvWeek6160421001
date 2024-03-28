@@ -23,7 +23,7 @@ class FoodListAdapter(val foodList:ArrayList<Food>)
         holder.binding.txtID.text = foodList[position].id
         holder.binding.txtName.text = foodList[position].name
         holder.binding.txtDesc.text = foodList[position].description
-        holder.binding.txtIngredients.text = foodList[position].ingredients?.joinToString(", ")
+        holder.binding.txtIngredients.text = "Ingredients: " + foodList[position].ingredients?.joinToString(", ")
 
         holder.binding.txtCalories.text = "Calories: " + foodList[position].nutrition?.calories
         holder.binding.txtProtein.text = "Protein: " + foodList[position].nutrition?.protein
